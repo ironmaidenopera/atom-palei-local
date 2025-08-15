@@ -23,7 +23,7 @@ echo "*.pdf" >> .gitignore
 git init
 # add and commit files
 git add README.md .gitignore
-git commit -m "first commit"
+git commit -m "hello world"
 # set branch name to main
 git branch -M main
 echo 'local git added'
