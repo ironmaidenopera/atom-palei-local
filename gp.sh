@@ -8,6 +8,11 @@ if git diff --quiet && git diff --cached --quiet; then
   echo "No changes to commit."
   exit 0
 fi
+# Detect *any* changes
+if ! git status --porcelain | grep .; then
+    echo "No changes to commit."
+    exit 0
+fi
 
 git add -A
 git commit -m "$1"
